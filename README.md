@@ -52,4 +52,4 @@ $ kubectl expose svc grafana --type=NodePort --target-Port=3000 --name grafana-e
 
 $ kubectl get svc -n grafana 
 
-# now access port garana svc
+# now access port grafana svc
