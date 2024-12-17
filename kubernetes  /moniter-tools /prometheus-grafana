@@ -14,7 +14,7 @@ $ kubectl create namespace prometheus
 
 $ helm repo add prometheus-community https://prometheus-community.github.io/helm-charts -n prometheus 
 
-$ helm repo update 
+$ helm repo update -n prometheus   
 
 $ helm install prometheus prometheus-community/prometheus -n prometheus
 
@@ -42,11 +42,15 @@ $ kubectl create ns grafana
 
 $ helm repo add grafana https://grafana.github.io/helm-charts -n grafana 
 
-$ helm repo update 
+$ helm repo update -n grafana 
 
-$ helm install grafana grafana/grafana 
+$ helm install grafana grafana/grafana -n grafana 
 
--> copy the grafana token to geneate grafana password 
+-> copy the grafana token to geneate grafana password    
+
+# token command when installed grafana yhrogh helm 
+
+kubectl get secret --namespace grafana grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
 
 and paste on terminal ---> copy password
 
@@ -55,7 +59,11 @@ $ kubectl get pods -n grafana
 $ kubectl get svc -n grafana 
 
 
-# now expose svc grafana or edit to the nodeport
+# now expose svc grafana or edit to the nodeport  or if not work expose edit service 
+
+$ kubectl edit svc grafana -n grafana
+
+or
 
 $ kubectl expose svc grafana --type=NodePort --target-port=3000 --name grafana-ext -n grafana 
 
