@@ -1,6 +1,8 @@
 v link=======      https://youtu.be/EeiYpnBHnhY?si=JYMQBx-KW-1YOXF1
 
 
+
+
 # steps to implement promitheus and grafana 
 
 + need cluster 
@@ -9,6 +11,10 @@ v link=======      https://youtu.be/EeiYpnBHnhY?si=JYMQBx-KW-1YOXF1
 
 
 # install prometheus using helm 
+
+or link aws 
+
+https://docs.aws.amazon.com/eks/latest/userguide/deploy-prometheus.html    ----doc
 
 $ kubectl create namespace prometheus
 
@@ -36,7 +42,9 @@ $ kubectl expose svc prometheus-server --type=NodePort --target-port=9000 --name
 
 
 
-# now add grafana repo 
+# now add grafana repo   or link 
+
+https://grafana.com/docs/grafana/latest/setup-grafana/installation/helm/  ------doc
 
 $ kubectl create ns grafana 
 
