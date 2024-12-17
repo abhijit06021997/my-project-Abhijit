@@ -25,7 +25,7 @@ $ kubectl get svc -n prometheus
 
 # expose prometheus service or edit 
 
-$ kubectl expose svc prometheus-server --type=NodePort --target-Port=9000 --name prometheus-server-ext
+$ kubectl expose svc prometheus-server --type=NodePort --target-port=9000 --name prometheus-server-ext
 
 # now open prometheus server using service port 
 
@@ -48,8 +48,9 @@ $ kubectl get svc -n grafana
 
 # now expose svc grafana or edit to the nodeport
 
-$ kubectl expose svc grafana --type=NodePort --target-Port=3000 --name grafana-ext -n grafana 
+$ kubectl expose svc grafana --type=NodePort --target-port=3000 --name grafana-ext -n grafana 
 
 $ kubectl get svc -n grafana 
 
 # now access port grafana svc
+
