@@ -14,7 +14,7 @@ v link=======      https://youtu.be/EeiYpnBHnhY?si=JYMQBx-KW-1YOXF1
 
 or link aws 
 
-https://docs.aws.amazon.com/eks/latest/userguide/deploy-prometheus.html    ----doc
+ # https://docs.aws.amazon.com/eks/latest/userguide/deploy-prometheus.html    ----doc  we can see
 
 $ kubectl create namespace prometheus
 
@@ -58,7 +58,7 @@ $ helm install grafana grafana/grafana -n grafana
 
 # token command when installed grafana yhrogh helm 
 
-kubectl get secret --namespace grafana grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
+ $ kubectl get secret --namespace grafana grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
 
 and paste on terminal ---> copy password
 
@@ -86,7 +86,7 @@ password ---paste hera password that you generated using token while instaling g
 
 # implement grafana with promitheus   open grafana 
 
-- > Go to the data sources of > prometheus > paste prometheus running server link > save $ test
+- > Go to the data sources of > prometheus > paste prometheus running server link > save $ test     [if you are using killarkoda paste prometheus link without "/query" word
 
 
 # creating dashboard for prometheus on grafana 
