@@ -41,6 +41,10 @@ $ helm repo update
 
 $ helm install grafana grafana/grafana 
 
+-> copy the grafana token to geneate grafana password 
+
+and paste on terminal ---> copy password
+
 $ kubectl get pods -n grafana 
 
 $ kubectl get svc -n grafana 
@@ -54,3 +58,38 @@ $ kubectl get svc -n grafana
 
 # now access port grafana svc
 
+username --admin 
+
+password ---paste hera password that you generated using token while instaling grafana throgh the helm 
+
+
+# implement grafana with promitheus   open grafana 
+
+- > Go to the data sources of > prometheus > paste prometheus running server link > save $ test
+
+
+# creating dashboard for prometheus on grafana 
+
+dashboard  > import >id(3662) default id to load  > scroll down  > choose prometheus and import to retrive data from prometheus 
+
+
+# to display more deep matric we need to expose or edit "prometheus-kube-state-metrics" to getting more metrics whihch may be default or running costom application 
+
+$ kubectl expose svc prometheus-kube-state-metrics --type=NodePort --target-port="running state svc port" --name prometheus-kube-state-ext anyname
+
+and access it 
+
+# Go  to the metrics and watch 
+
+go to the cluster
+
+# see configmap for kube-state-metric server yaml file  where specified rule for getting default metric of deployment,pod,replicas but those are default not applications metrics 
+
+# to get application metrics we need to addnew rule for new scrap information  aor application and have to specify traget rule url where application are running e.g
+
+scrape_configs: 
+- job_name:
+  static_config:
+  - targets:
+    -localhost: "url or port where application running" 
+  
