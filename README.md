@@ -91,5 +91,5 @@ scrape_configs:
 - job_name:
   static_config:
   - targets:
-    -localhost: "url or port where application running" 
+  -localhost: "url or port where application running" 
   
