@@ -14,6 +14,10 @@ $ kubectl port-forward svc/service name 31950:80 --address=0.0.0.0 &
 + need helm 
 
 
+
+ # https://docs.aws.amazon.com/eks/latest/userguide/deploy-prometheus.html    ----doc  we can see
+
+
 # install prometheus using helm 
 
 or link aws 
@@ -117,6 +121,13 @@ scrape_configs:
   static_config:
   - targets:
     -localhost: "url or port where application running" 
+
+
+# to display kubernet defaul dashboad on grafana 
+
+Got to grafana dashabooard on your browser > select any template > import in grafana with costom id 
+
+
   
 
   
