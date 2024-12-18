@@ -1,5 +1,9 @@
 v link=======      https://youtu.be/EeiYpnBHnhY?si=JYMQBx-KW-1YOXF1
 
+# if you are using cloud yuo must port forward for access service 
+
+$kubectl port-forward svc/service name 31950:80 --address=0.0.0.0 &
+
 
 
 
