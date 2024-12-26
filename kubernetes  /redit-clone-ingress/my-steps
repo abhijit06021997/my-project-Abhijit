@@ -1,0 +1,14 @@
+# steps for deploy redit clone along with redit clone deployment using ingress
+
+Step 1: Clone the source code
+Step 2: Containerize the Application using Docker
+Step 3) Building Docker-Image
+Step 4) Push the Image To DockerHub
+Step 5) Write a Kubernetes Manifest File
+Write Deployment.yml file
+Write Service.yml file
+Step 5) Deploy the app to Kubernetes & Create a Service For It
+Step 6) Let's Configure Ingress
+Ingress:
+Step 8) Expose the app
+Test Ingress
