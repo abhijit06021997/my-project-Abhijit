@@ -1,4 +1,6 @@
 # steps for deploy redit clone along with redit clone deployment using ingress
+# BLOG link :-     https://trainwithshubham.hashnode.dev/deployed-a-reddit-copy-on-kubernetes-with-ingress-enabled#heading-step-1-clone-the-source-code
+
 
 Step 1: Clone the source code
 Step 2: Containerize the Application using Docker
