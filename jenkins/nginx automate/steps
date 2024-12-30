@@ -1,1 +1,42 @@
 # deploy nginx/appache via jenkins pipoeline 
+
+
+frestyle project 
+
+sorce code mangement ===git 
+
+repo url 
+
+to branch diffrent ==== */dev 
+
+
+# build trigers ===git hub hook trigers for git SCM ===apply
+
+# go to git hub setting for configure webhook to automate 
+
+webhook > add hook > password   > 
+
+payload url  >jenkins url > localhost:port/github-webhook/
+
+content type 
+
+application/json 
+
+which trigers you would like to trgers 
+
+> let me select individual events pull request and push request enables it  > add webhook 
+
+# now create a text file and add content in thier 
+
+Go to that branch test.txt >welcome then > commit it
+
+Gotto jenkisn see it automate pull code 
+
+
+# install nginx and apache2 
+
+
+then configure jenkins 
+
+execute shell
+
