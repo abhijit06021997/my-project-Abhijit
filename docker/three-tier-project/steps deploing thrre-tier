@@ -25,19 +25,21 @@ steps:
 --------------------
 1)$ docker network create mongo-network
 
-1) $ docker container run -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASS=password --net mongo-network --name=mongodb -d mongo
+# run database container 
+
+1) $ docker container run -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password --net mongo-network --name=mongodb -d mongo
 
 $ docker ps
 
-# 2)run mongo-express to manage  mongo database  you should pass envrnment variable where specified databse to connect that databse as well as specify current server name whic is also run on its default port we can specify or not its running port number]
+# run mongo-express to manage  mongo database  you should pass envrnment variable where specified databse to connect that databse as well as specify current server name whic is also run on its default port we can specify or not its running port number]
 [see doc for its container where specify whihc envirnemnt you shoud pass while running container]
 
-$ docker container run -p 8081:8081 --netwok=mongo-network --name=mongo-express -e ME_CONFIG_MONGODB_ADMINUSERNAME=ADMIN -e ME_CONFIG_MONGODB__SERVER=mongodb -d mongo-express
+2) $ docker container run -p 8081:8081 --net mongo-network --name=mongo-express -e ME_CONFIG_MONGODB_ADMINUSERNAME=ADMIN -e ME_CONFIG_MONGODB__SERVER=mongodb -d mongo-express
 
 ==try to acess it [2] with specify port or o.o.o.o:8081
 
 [on browser][to store data of application in databse]
-# =open database >1) create databse with name > user-accounts(as spoecified in database application to onnect this databse)
+# =open database >1) create databse with name > user-accounts(as spoecified in database (by devloper)  application to onnect this databse)
 2)my-db
 
 
@@ -48,7 +50,14 @@ $ docker container run -p 8081:8081 --netwok=mongo-network --name=mongo-express 
 
 ===mongoUrlLocal ="mongodb://admin:password@mongdb:27017";
 ===let  mongoUrlDocker="mongodb:admin password @mongodb:27017";
-==Go to the index.html change localhost --> to 0.0.0.0:3000			[windows server dont try to change]
+
+==Go to the index.html 
+
+configure
+
+const respose =0.0.0.0:3000  replace of localhost
+const respose ==0.0.0.0:3000   replace of localhost
+change localhost --> to 0.0.0.0:3000			[windows server dont try to change]
 
 
 
@@ -72,6 +81,18 @@ EXPOSE 3000  #as devloper application port running
 
 # no need for /home/app/server.js because of WORKDIR
 CMD ["node", "server.js"]    #execute server 
+
+
+
+---
+FROM node
+WORKDIR /app
+COPY . .
+ENV MONGO_DB_USERNAME=admin
+ENV MONGO_DB_PWD_=password
+RUN npm install 
+EXPOSE 3000
+CMD ["node", "server.js"]
 
 ---
 
