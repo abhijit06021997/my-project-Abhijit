@@ -1,0 +1,63 @@
+# to use parameterzed 
+we can set parameter with set default value 
+
+# string           Execute with shell 
+
+name --FNAME
+default ==Abhijit
+
+name ---LNAME
+default -==Ramteke
+
+if we set this parameter and type in 
+
+echo $FNAME $LNAME
+
+it will show my name and sir name 
+
+build it 
+---
+
+choive parameter 
+
+name ===SEX 
+
+choice =
+MALE
+FEMALE
+OTHER 
+
+Execute with shell
+
+echo $FNAME $LNAME $SEX 
+
+or  
+
+name VILLAGE 
+
+chices==
+TUMSAR
+KHAPRI
+NAGPUR
+
+echo $FNAME $LNAME $VILLAGE 
+
+while building job select apropriate vuillage name  and build it 
+
+---------------------------------
+
+# cron job 
+
+build trigers 
+==build periodicly 
+sceduled
+* * * * * ===  (minit)    (hour)    (day of month)    ( month )   ( day of week )
+
+(every minit)  (every hour)  (every day)  (every month)  (every week) 
+
+it will build automatocally in every minit evry hour evry day every month every week days 
+
+
+==============================
+
+
