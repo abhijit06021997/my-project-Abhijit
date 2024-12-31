@@ -61,3 +61,16 @@ it will build automatocally in every minit evry hour evry day every month every 
 ==============================
 
 
+# ADD GITHUB credential for jenkins 
+manage jenkins > configure jenkins >git > add credential > kind =secret text 
+
+secret ===personal acess token password paste here 
+]
+ID --any anem[ git-hub-cicd }  >>>>>.add
+
+credential >>select that you cteated with name and test connection 
+
+
+
+
+
