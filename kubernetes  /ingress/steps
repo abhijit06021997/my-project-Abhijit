@@ -1,0 +1,11 @@
+# to deploy ingress we shoul cluster
+1)deployment
+
+2)service 
+
+3)ingress yaml 
+
+4)ingress controller-->nginx controller officiel 
+there are two ingress nginx  controlelr created by kubernets and nginx 
+we should use kubernets nginx controller 
+
