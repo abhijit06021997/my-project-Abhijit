@@ -1,0 +1,3 @@
+# to run ansible play book  ===ansible-playbook myfirst.yaml
+# to check validate === ansible-playbook --syntax-check myfirst.yaml 
+
