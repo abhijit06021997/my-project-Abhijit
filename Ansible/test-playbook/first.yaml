@@ -1,1 +1,9 @@
+---
+- name : my_playbook
+  hosts: localhost
 
+  tasks:
+  - name: Test Conectivity
+    ping:
+
+#test for network connectivity
