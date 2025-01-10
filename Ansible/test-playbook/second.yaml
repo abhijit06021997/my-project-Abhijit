@@ -1,0 +1,9 @@
+--
+- name : my_playbook
+  hosts: localhost
+
+  tasks:
+  - name: Test Conectivity
+    ping:
+  - name: "print-output"
+    debug: msg="alright"    #to print output 
