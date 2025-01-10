@@ -1,0 +1,13 @@
+--
+- name: instaling nginx
+  hosts: localhost
+  tasks:
+  - name: instaling nginx
+    apt:
+      name: nginx
+      state: present    #we make sure nginx install and our state present on localhost 
+  - name: starting nginx
+    service:          
+      name: nginx
+      state: started      #make sure started 
+      enabled: true      # make sure enabled 
