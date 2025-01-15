@@ -4,7 +4,7 @@
   tasks:
   - name: copying files
     copy:
-      src: /home/abhijit-ajit/Desktop/newfile.txt
+      src: /home/abhijit-ajit/Desktop/newfile.txt   #sorce and destination must specify it is wrong
       dest: /home/abhijit-ajit/Desktop/dir
       owner: abhijit
       group: abhijit
