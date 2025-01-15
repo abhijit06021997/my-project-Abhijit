@@ -1,0 +1,12 @@
+---
+- name: copying files
+  hosts: localhost
+  tasks:
+  - name: copying files
+    copy:
+      src: /home/abhijit-ajit/Desktop/newfile.txt
+      dest: /home/abhijit-ajit/Desktop/dir
+      owner: abhijit
+      group: abhijit
+      mode: ugo=rwx
+~                   
