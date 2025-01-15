@@ -1,0 +1,12 @@
+---
+- name: craeting files
+  hosts: localhost
+  tasks:
+  - name: creating files
+    file:
+      path: /home/abhijit-ajit/Desktop/abhijit.txt
+      dest: /home/abhijit-ajit/Desktop/
+      state: touch
+      owner: abhijit
+      group: abhijit
+      mode: u=rwx,g=rw,o=rx
