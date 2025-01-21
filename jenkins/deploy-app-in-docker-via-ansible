@@ -25,6 +25,26 @@ $ vim hosts
 su jenkins
 
 -ssh-keygen 
+$ cd .ssh 
+
+$ ssh-copy-id copy pub key into docker server  or cat id_rsa.pub
+#(2)docker server 
+>copy key and paste >open folder in .ssh (docker server) >vim authorzed_key >paste in authorized key 
+
+
+1)# server 1 jenkins 
+
+ssh root@docker_server_ip    and exit 
+
+$ mkdor playbbokl 
+$ cd playbook 
+
+____________write here playbbok 
+
+
+
+
+
 
 
 
