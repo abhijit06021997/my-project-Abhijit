@@ -1,0 +1,12 @@
+1)lainuch jenkins instance 
+
+2)laiunch instance for and docker 
+
+  1)jenkins==
+  $ hostnamectl set-hostname jenkins
+  $ /bin/bash ==login as jenkins shell
+
+
+  2)dockr 
+  -apt install amzon-pip -y -for pip
+  -pip install docker ---for ansible docker depicuiency 
