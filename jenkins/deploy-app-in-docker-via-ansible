@@ -2,11 +2,29 @@
 
 2)laiunch instance for and docker 
 
-  1)jenkins==
+#1)jenkins==
   $ hostnamectl set-hostname jenkins
   $ /bin/bash ==login as jenkins shell
 
+-apt install python3-pip -y -for pip
+  -pip install docker ---for ansible docker depicuiency
 
-  2)dockr 
-  -apt install amzon-pip -y -for pip
-  -pip install docker ---for ansible docker depicuiency 
+
+
+ # 2)dockr 
+-docker install 
+-usermod -aG docker ubuntu && newgrp docker
+-ssh-keygen 
+  
+#1) cd /etc/ansible
+$ vim hosts
+[dockerservers]
+(ip) dockerserverwhere is it]
+
+-passwd jenkins 
+su jenkins
+
+-ssh-keygen 
+
+
+
