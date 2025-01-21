@@ -1,4 +1,4 @@
-!#/bin/bash
+#!/bin/bash
 
 read -p "what is your age?" age        #set of iput for user according to user input it will output 
 read -p "your country?" country
