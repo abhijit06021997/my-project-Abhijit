@@ -1,1 +1,6 @@
+# To Deploy java application we should have maven tool 
+# go to mange jennkins -->tools --> install maven 
+
+for e.g name -- maven 
+version --3.9.9
 
