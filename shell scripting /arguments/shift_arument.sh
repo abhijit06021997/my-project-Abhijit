@@ -8,3 +8,8 @@ shift                               #shift devided value from exected user rest 
 echo "rest of description is $@"
 
 #we are creating user and give description rest of value noether it will not take for description
+
+
+# fro executing this $ bash shift_argument.sh abhijit production team 
+#abhijitr --for user 
+# prodcution team --for rest of descrption devided 
